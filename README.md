@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 React Modele
 ===============
 
@@ -374,3 +375,6 @@ Ou
 ## Installer yarn
 
 Suivre https://classic.yarnpkg.com/en/docs/install/ en fonction de votre OS
+=======
+# test
+>>>>>>> 1ac70df7e3d6885295534210804ab20b0bd2dbde
