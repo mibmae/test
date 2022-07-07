@@ -7,8 +7,10 @@ function City() {
 const [city, setCity] = useState([]);
 
     const search = (e) => {
+        if (e.target.value.length > 0) {
         document.getElementById('dlist').style.display = 'block';
         setCity(searchCity.byName(`${e.target.value}`, 20))
+        }
     }
 
   return (
