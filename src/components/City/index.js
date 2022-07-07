@@ -10,6 +10,8 @@ const [city, setCity] = useState([]);
         if (e.target.value.length > 0) {
         document.getElementById('dlist').style.display = 'block';
         setCity(searchCity.byName(`${e.target.value}`, 20))
+        } else {
+            document.getElementById('dlist').style.display = 'none';
         }
     }
 
