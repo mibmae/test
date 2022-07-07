@@ -1,0 +1,19 @@
+#dlist {
+    display: none;
+}
+
+.option {
+    color: black;
+    padding: 0.8rem;
+    width: 100%;
+    border-bottom: 1px solid #2980BC;;
+    cursor: pointer;
+    &:hover {
+        color: white;
+        background-color: #2980BC!important;
+    }
+}
+
+.inputCity {
+    width: 100%;
+}

@@ -2,6 +2,7 @@
 import React from 'react';
 
 // == Import
+import City from 'src/components/City';
 import Counter from 'src/containers/Counter';
 import reactLogo from './react-logo.svg';
 import './styles.css';
@@ -10,8 +11,8 @@ import './styles.css';
 const App = () => (
   <div className="app">
     <img src={reactLogo} alt="react logo" />
-    <h1>Composant : App</h1>
-    <Counter />
+    <City />
+    {/* <Counter /> */}
   </div>
 );
 
