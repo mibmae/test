@@ -40,20 +40,20 @@
     
 }
 
-.option {
-    color: black;
-    padding: 0.8rem;
-    width: 100%;
-    border-bottom: 1px solid #2980BC;;
-    cursor: pointer;
-    &:hover {
-        color: white;
-        background-color: #2980BC!important;
-    }
-    @media screen and (max-width: 500px) {
-        width: 100%;
-     }
-}
+// .option {
+//     color: black;
+//     padding: 0.8rem;
+//     width: 100%;
+//     border-bottom: 1px solid #2980BC;;
+//     cursor: pointer;
+//     &:hover {
+//         color: white;
+//         background-color: #2980BC!important;
+//     }
+//     @media screen and (max-width: 500px) {
+//         width: 100%;
+//      }
+// }
 
 .inputCity {
     width: 20%;
