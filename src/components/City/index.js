@@ -19,10 +19,9 @@ const [city, setCity] = useState([]);
    <div>
     <input type="text" id="citySearch" className="inputCity" onChange={(e) => search(e)} />
     {/* <div>{city.map((c) => c.name)}</div> */}
-    <datalist id="dlist" className="city_datalist">
+    <datalist id="dlist">
         {city.length >= 1 && city.map((cit) => (
           <option
-            className="option"
             value={`${cit.name}`}
             key={generateUniqueKey(cit)}
             // onClick={(e) => SelectCity(e.target.textContent.replace(/^./, ''), region.code, false, true)}
