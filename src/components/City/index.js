@@ -17,7 +17,7 @@ const [city, setCity] = useState([]);
     }
 
     const resize = () => {
-      alert("Votre résolution d'écran est: " + window.innerWidth + "x" + window.innerHeight);
+      // alert("Votre résolution d'écran est: " + window.innerWidth + "x" + window.innerHeight);
     }
 
     window.onresize = resize;
