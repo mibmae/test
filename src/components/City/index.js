@@ -18,7 +18,7 @@ const [city, setCity] = useState([]);
 
   return (
    <div>
-    <input type="text" id="citySearch" className="input_city" onChange={(e) => search(e)} />
+    <input type="text" id="citySearch" autocapitalize="off" className="input_city" onChange={(e) => search(e)} />
     <datalist id="dlist" className="city_datalist">
         {city.length >= 1 && city.map((cit) => (
           <option
