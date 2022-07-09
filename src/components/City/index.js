@@ -16,6 +16,11 @@ const [city, setCity] = useState([]);
         }
     }
 
+    const resize = () => {
+      alert("Votre résolution d'écran est: " + screen.width + "x" + screen.height);
+    }
+
+    window.onresize = resize;
   return (
    <div>
     <input type="text" id="citySearch" autocapitalize="off" className="input_city" onChange={(e) => search(e)} />
