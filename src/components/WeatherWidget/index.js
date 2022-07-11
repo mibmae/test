@@ -5,9 +5,9 @@ import './style.scss';
 import store from 'src/store';
 
 function WeatherWidget({ city, code }) {
-  console.log('ODE', code)
-  if (city === undefined) { city = 'Saint-Ambroix'}
-  if (code === undefined) { code = '30500'}
+  console.log('ODE', code, city)
+  if (city.length < 1) { city = 'Saint-Ambroix'; city.toString()}
+  if (code.length < 1) { code = '30500'; code.toString()}
   const [desc, setDesc] = useState('');
   const [temperature, setTemperature] = useState('');
   const [icon, setIcon] = useState('');
@@ -21,7 +21,6 @@ function WeatherWidget({ city, code }) {
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${code}&units=metric&lang=fr&appid=${apiKey}`)
         .then((response) => response.json())
         .then((res) => {
-          console.log(res)
           setIcon(res.weather[0].icon);
       //   // console.log(code);
       //   // console.log(icon, data.weather[0].icon);
@@ -50,7 +49,6 @@ function WeatherWidget({ city, code }) {
     };
 
     loadData();
-    console.log('tintintint')
   }, [city]);
 
   return (
@@ -71,8 +69,8 @@ function WeatherWidget({ city, code }) {
 }
 
 WeatherWidget.propTypes = {
-  city: PropTypes.string,
-  code: PropTypes.string.isRequired,
+  city: PropTypes.array,
+  code: PropTypes.array.isRequired,
 };
 
 export default WeatherWidget;

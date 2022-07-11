@@ -26,9 +26,8 @@ const [cityCp, setCityCp] = useState([]);
     }
 
     const setCityWeather = (city) => {
-      console.log(city.zip_code)
-      setCityO(city.name)
-      setCityCp(city.zip_code)
+      setCityO([city.name])
+      setCityCp([city.zip_code])
       document.getElementById('dlist').style.display = 'none';
       document.getElementById('citySearch').value = '';
     }
