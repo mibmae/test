@@ -34,7 +34,7 @@ const [cityCp, setCityCp] = useState([]);
 
     window.onresize = resize;
   return (
-   <div>
+   <div className="city_container">
     <input type="text" id="citySearch" autoCapitalize="off" className="input_city" onChange={(e) => search(e)} />
     <datalist id="dlist" className="city_datalist">
         {city.length >= 1 && city.map((cit) => (
