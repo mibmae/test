@@ -12,7 +12,7 @@ import './styles.css';
 // == Composant
 const App = () => (
   <div className="app">
-    <img src={meteologo} alt="Logo Météo" />
+    <img className='imag' src={meteologo} alt="Logo Météo" />
     <City />
     {/* <Counter /> */}
   </div>

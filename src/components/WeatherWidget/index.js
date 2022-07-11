@@ -5,7 +5,6 @@ import './style.scss';
 import store from 'src/store';
 
 function WeatherWidget({ city, code }) {
-  console.log('ODE', code, city)
   if (city.length < 1) { city = 'Saint-Ambroix'; city.toString()}
   if (code.length < 1) { code = '30500'; code.toString()}
   const [desc, setDesc] = useState('');

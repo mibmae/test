@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './styles.scss';
 import { searchCity, searchDepartment, searchRegion } from 'france-cities-js';
 import { generateUniqueKey } from 'src/functions';
@@ -11,11 +11,13 @@ const [city, setCityE] = useState([]);
 const [cityO, setCityO] = useState([]);
 const [cityCp, setCityCp] = useState([]);
 
+
+
     const search = (e) => {
         if (e.target.value.length > 0) {
         document.getElementById('dlist').style.display = 'block';
         setCityE(searchCity.byName(`${e.target.value}`, 20))
-        console.log(searchCity.byName(`${e.target.value}`, 20))
+        // console.log(searchCity.byName(`${e.target.value}`, 20))
         } else {
             document.getElementById('dlist').style.display = 'none';
         }
@@ -28,6 +30,7 @@ const [cityCp, setCityCp] = useState([]);
     const setCityWeather = (city) => {
       setCityO([city.name])
       setCityCp([city.zip_code])
+      // localStorage.setItem('towns', array);
       document.getElementById('dlist').style.display = 'none';
       document.getElementById('citySearch').value = '';
     }
@@ -35,7 +38,7 @@ const [cityCp, setCityCp] = useState([]);
     window.onresize = resize;
   return (
    <div className="city_container">
-    <input type="text" id="citySearch" autoCapitalize="off" className="input_city" onChange={(e) => search(e)} />
+    <input type="text" id="citySearch" autoCapitalize="off" className="input_city" onChange={(e) => search(e)} placeholder="Entrez et séléctionnez une ville"/>
     <datalist id="dlist" className="city_datalist">
         {city.length >= 1 && city.map((cit) => (
           <option
@@ -48,6 +51,7 @@ const [cityCp, setCityCp] = useState([]);
         ))}
         </datalist>
         <WeatherWidget city={cityO} code={cityCp}/>
+        {/* <div className="history">{towns}</div> */}
    </div>
  
  );

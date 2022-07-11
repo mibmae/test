@@ -7,3 +7,9 @@
 .app img {
   max-width: 150px;
 }
+
+@media screen and (min-height: 200px) and (max-height: 400px) and (orientation: portrait) {
+  .imag {
+    display: none;
+  }
+}
