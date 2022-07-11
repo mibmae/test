@@ -2,8 +2,9 @@
 import React from 'react';
 
 // == Import
-import City from 'src/components/City';
+import City from 'src/containers/City';
 import Counter from 'src/containers/Counter';
+import WeatherWidget from 'src/components/WeatherWidget';
 import reactLogo from './react-logo.svg';
 import './styles.css';
 

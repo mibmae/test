@@ -7,10 +7,7 @@
     width: 100%;
     border-bottom: 1px solid #2980BC;;
     cursor: pointer;
-    &:hover {
-        color: white;
-        background-color: #2980BC!important;
-    }
+    
     @media screen and (min-height: 200px) and (max-height: 400px) and (orientation: portrait) {
         width: 100%;
      }
@@ -20,6 +17,21 @@
 }
 
 .city_datalist {
+    :nth-child(odd) {
+        // background-color: #2980BC;
+        // &:hover {
+        //     color: #2980BC!important;
+        //     background-color: white;
+        // }
+      }
+    :nth-child(even) {
+        // &:hover {
+        //     color: white;
+        //     background-color: #2980BC!important;
+        // }
+    }
+
+    
     display: none;
    -ms-flex-wrap: wrap;
    flex-wrap: wrap;
@@ -30,13 +42,18 @@
    background-color: white;
    max-height: 233px;
    width: 20rem;
+   left: 49rem;
+   top: 12rem;
    z-index: 9888;   
    overflow-y: auto;
    overflow-x: hidden;
    @media screen and(max-width: 500px) {
+    left: 0;
        margin-left: 0rem;
        margin-top: 0.6rem;
        width: 100%;
+       position: inherit;
+
    }
    @media screen and (max-width: 670px) and (orientation: landscape) {
        width: 34%;
@@ -46,7 +63,7 @@
    @media screen and (min-height: 200px) and (max-height: 400px) and (orientation: landscape) {
        width: 100%;
        margin-left: 0rem;
-       margin-top: 0rem;
+       margin-top: 0.6rem;
    }
    @media screen and (min-height: 200px) and (max-height: 400px) and (orientation: portrait) {
        width: 71%;
@@ -62,7 +79,7 @@
             margin-left: 0;
         }
     
-        @media only screen and (min-height : 280px) and (max-height : 400px) {
+        @media only screen and (min-height : 280px) and (max-height : 400px) { // Mobile avec Clavier
             font-size: 0.8rem;
             height: 3rem!important;
             width: 100%!important;
@@ -100,4 +117,12 @@
                 height: 2rem!important;
             }
         }
+    }
+
+    .option {
+        &:hover {
+            color: white;
+            background-color: #2980BC!important;
+        }
+        border-bottom:1px solid #2980BC;
     }

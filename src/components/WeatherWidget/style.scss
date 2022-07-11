@@ -1,0 +1,72 @@
+.weather-widget {
+  @media screen and (max-width: 500px) {
+    // display: none;
+    width: 100%;
+  }
+  display: flex;
+  justify-content: space-between;
+  // width: 10%;
+  //background-color: rgba(255,255,255,.2);
+  //border-radius: 10px;
+  padding: 1rem;
+  // border: 1px solid rgba(255,255,255,.5);
+  color: rgb(45, 61, 61);
+  position: absolute;
+  background-color: #bdb099;
+  z-index: -3;
+  height: inherit;
+  //margin: 2rem;
+  &__city {
+    @media screen and (max-width: 600px) {
+      font-size: 1.6rem;
+      margin-left: 0;
+      width: 100%;
+  }
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+  }
+  &__temperature {
+    @media screen and (max-width: 600px) {
+      font-size: 2rem;
+    margin: 0 0rem;
+    width: 100%;
+    text-align: left;
+    }
+    font-size: 1em;
+    margin-bottom: 0;
+  }
+  &__icon {
+    @media screen and (max-width: 500px) {
+      width: 81px;
+      left: 57%;
+      top: -13px;
+      margin: -1rem;
+      // background-color: #bdb099;
+    }
+    @media screen and (min-width: 1201px) and (max-width: 1600px) {
+      width: 80px;
+      padding: 10px;
+      margin: -1rem;
+      // background-color: #bdb099;
+
+    }
+    
+    @media screen and (min-width: 650px) and (max-width: 1200px) {
+      width: 80px;
+      left: 53%;
+      top: -1rem;
+      // background-color: #bdb099;
+
+    }
+    width: 80px;
+    margin: -1rem;
+    // position: absolute;
+    // top: 13px;
+    // left: 84%;
+    // right: 0;
+    // background-color: grey;
+
+  }
+}
